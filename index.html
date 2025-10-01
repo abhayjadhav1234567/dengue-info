@@ -1,75 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dengue Fever Awareness 3D</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
-      color: #333;
-    }
-    header {
-      background: linear-gradient(45deg, #e63946, #d62828);
-      color: #fff;
-      text-align: center;
-      padding: 50px 20px;
-    }
-    header h1 {
-      font-size: 2.8rem;
-      margin: 0;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #b51717;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 14px 18px;
-      font-weight: bold;
-      transition: transform 0.3s ease;
-    }
-    nav a:hover {
-      transform: scale(1.1) rotateX(10deg);
-      background: #720c0c;
-    }
-    section {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      transform-style: preserve-3d;
-      transition: transform 0.5s;
-    }
-    section:hover {
-      transform: rotateY(5deg) rotateX(3deg) scale(1.02);
-    }
-    section h2 {
-      color: #e63946;
-      border-bottom: 2px solid #e63946;
-      padding-bottom: 5px;
-    }
-    footer {
-      text-align: center;
-      background: #e63946;
-      color: white;
-      padding: 20px;
-      margin-top: 30px;
-    }
-    #canvas-container {
-      width: 100%;
-      height: 300px;
-      background: #111;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -143,47 +78,8 @@
     <p>© 2025 Dengue Awareness Initiative | Stay Safe, Prevent Dengue</p>
   </footer>
 
-  <!-- Three.js CDN -->
+  <!-- Three.js -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
-  <script>
-    // Basic Three.js Setup
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 300, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, 300);
-    document.getElementById("canvas-container").appendChild(renderer.domElement);
-
-    // Create a sphere to represent the virus
-    const geometry = new THREE.SphereGeometry(2, 32, 32);
-    const material = new THREE.MeshPhongMaterial({ color: 0xe63946, shininess: 100, wireframe: false });
-    const sphere = new THREE.Mesh(geometry, material);
-    scene.add(sphere);
-
-    // Lighting
-    const light = new THREE.PointLight(0xffffff, 1, 100);
-    light.position.set(10, 10, 10);
-    scene.add(light);
-
-    const ambient = new THREE.AmbientLight(0x404040);
-    scene.add(ambient);
-
-    camera.position.z = 5;
-
-    // Animation Loop
-    function animate() {
-      requestAnimationFrame(animate);
-      sphere.rotation.x += 0.01;
-      sphere.rotation.y += 0.01;
-      renderer.render(scene, camera);
-    }
-    animate();
-
-    // Responsive resize
-    window.addEventListener("resize", () => {
-      camera.aspect = window.innerWidth / 300;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, 300);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
