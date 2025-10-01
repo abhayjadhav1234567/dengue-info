@@ -12,7 +12,7 @@ document.querySelectorAll("nav a").forEach(link => {
 function initGlobe() {
   const globe = Globe()
     (document.getElementById('globeViz'))
-    .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
+    .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
     .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
     .pointOfView({ lat: 20, lng: 0, altitude: 2.5 });
 
