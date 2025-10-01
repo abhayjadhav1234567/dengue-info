@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dengue Awareness | Stay Safe</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/2d5b4d6a4b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>🦟 Dengue Fever Awareness</h1>
+      <p>Learn • Prevent • Protect</p>
+      <a href="#about" class="btn">Explore More</a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#symptoms">Symptoms</a>
+    <a href="#prevention">Prevention</a>
+    <a href="#treatment">Treatment</a>
+    <a href="#statistics">Statistics</a>
+  </nav>
+
+  <!-- About -->
+  <section id="about">
+    <h2>What is Dengue Fever?</h2>
+    <p>
+      Dengue fever is a mosquito-borne viral infection caused by four types of dengue virus (DENV-1 to DENV-4). 
+      It spreads through the bite of infected <em>Aedes aegypti</em> and <em>Aedes albopictus</em> mosquitoes.  
+      Symptoms can range from mild fever to severe, life-threatening dengue hemorrhagic fever.  
+      More than 3.9 billion people across 120+ countries are at risk.  
+    </p>
+  </section>
+
+  <!-- Symptoms -->
+  <section id="symptoms">
+    <h2>Symptoms</h2>
+    <div class="card-container">
+      <div class="card">
+        <i class="fas fa-thermometer-three-quarters"></i>
+        <h3>High Fever</h3>
+        <p>Sudden high fever up to 104°F (40°C).</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-head-side-virus"></i>
+        <h3>Severe Headache</h3>
+        <p>Intense headache & pain behind the eyes.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-bone"></i>
+        <h3>Body Pain</h3>
+        <p>Muscle, joint, and bone pain (“breakbone fever”).</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-tint"></i>
+        <h3>Bleeding</h3>
+        <p>Nose/gum bleeding, easy bruising, rashes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prevention -->
+  <section id="prevention">
+    <h2>Prevention</h2>
+    <div class="card-container">
+      <div class="card">
+        <i class="fas fa-mosquito"></i>
+        <h3>Avoid Mosquito Bites</h3>
+        <p>Use repellents, nets, and protective clothing.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-water"></i>
+        <h3>Remove Stagnant Water</h3>
+        <p>Clean containers, drains & open water tanks.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-spray-can"></i>
+        <h3>Community Fogging</h3>
+        <p>Neighborhood spraying reduces outbreaks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment -->
+  <section id="treatment">
+    <h2>Treatment</h2>
+    <p>
+      Currently, there is no specific antiviral treatment for dengue. 
+      Care is supportive and focuses on relieving symptoms and preventing complications:
+    </p>
+    <ul>
+      <li>💧 Drink plenty of fluids (ORS, soups, juices).</li>
+      <li>💊 Use paracetamol for fever & pain (avoid aspirin & ibuprofen).</li>
+      <li>🏥 Hospitalization for severe cases: IV fluids, oxygen, blood transfusions if needed.</li>
+      <li>⚠️ Monitor warning signs: persistent vomiting, bleeding, abdominal pain, dizziness.</li>
+    </ul>
+  </section>
+
+  <!-- Global Statistics -->
+  <section id="statistics">
+    <h2>Global Dengue Statistics</h2>
+    <p>Interactive 3D chart showing estimated dengue cases by country 🌍</p>
+    <div id="chart3d"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Dengue Awareness Initiative | Stay Safe, Prevent Dengue</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
 
