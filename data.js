@@ -1,4 +1,4 @@
-// Example dengue cases by country (sample data)
+// Global dengue cases sample dataset
 const dengueData = [
   { country: "India", cases: 1500000, lat: 20.5937, lon: 78.9629 },
   { country: "Brazil", cases: 1200000, lat: -14.235, lon: -51.9253 },
