@@ -1,124 +1,60 @@
-/* Global */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #f9f9f9;
-}
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #d62828;
-}
-section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: auto;
+// Smooth scroll for navigation
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
+
+// Scroll animation
+window.addEventListener("scroll", () => {
+  document.querySelectorAll("section").forEach(sec => {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      sec.style.opacity = 1;
+      sec.style.transform = "translateY(0)";
+    }
+  });
+});
+
+// Initial hidden style
+document.querySelectorAll("section").forEach(sec => {
+  sec.style.opacity = 0;
+  sec.style.transform = "translateY(50px)";
+  sec.style.transition = "all 1s ease-out";
+});
+
+// 3D Dengue Data Chart using Plotly
+function render3DChart() {
+  const data = [{
+    type: 'scatter3d',
+    mode: 'markers+text',
+    text: dengueData.map(d => `${d.country}<br>Cases: ${d.cases.toLocaleString()}`),
+    textposition: 'top center',
+    x: dengueData.map(d => d.lon),   // Longitude
+    y: dengueData.map(d => d.lat),   // Latitude
+    z: dengueData.map(d => d.cases), // Cases
+    marker: {
+      size: 10,
+      color: dengueData.map(d => d.cases),
+      colorscale: 'Reds',
+      opacity: 0.8
+    }
+  }];
+
+  const layout = {
+    margin: { l: 0, r: 0, b: 0, t: 0 },
+    scene: {
+      xaxis: { title: 'Longitude' },
+      yaxis: { title: 'Latitude' },
+      zaxis: { title: 'Cases' }
+    }
+  };
+
+  Plotly.newPlot('chart3d', data, layout);
 }
 
-/* Hero */
-.hero {
-  position: relative;
-  height: 100vh;
-  background: url("https://img.freepik.com/free-vector/mosquito-background-with-realistic-style_23-2147879710.jpg") no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.hero .overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.6);
-}
-.hero-content {
-  position: relative;
-  color: #fff;
-  z-index: 2;
-}
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-.hero p {
-  font-size: 1.3rem;
-}
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #e63946;
-  color: #fff;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-.btn:hover {
-  background: #a4161a;
-}
-
-/* Navigation */
-nav {
-  display: flex;
-  justify-content: center;
-  background: #b51717;
-  flex-wrap: wrap;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 12px 18px;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-}
-nav a:hover {
-  transform: scale(1.1);
-  background: #720c0c;
-  border-radius: 5px;
-}
-
-/* Cards */
-.card-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 250px;
-  transition: transform 0.4s;
-}
-.card:hover {
-  transform: rotateY(10deg) scale(1.05);
-}
-.card i {
-  font-size: 40px;
-  color: #e63946;
-  margin-bottom: 15px;
-}
-
-/* Chart */
-#chart3d {
-  width: 100%;
-  height: 500px;
-  margin-top: 20px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  background: #e63946;
-  color: white;
-  padding: 20px;
-}
-
+// Render chart on load
+render3DChart();
