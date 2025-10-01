@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dengue Fever Awareness 3D</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
+      color: #333;
+      perspective: 1000px;
+    }
+    header {
+      background: linear-gradient(45deg, #e63946, #d62828);
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transform: translateZ(50px);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    }
+    nav {
+      background: #b51717;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      transform: translateZ(40px);
+    }
+    nav a {
+      color: #fff;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    nav a:hover {
+      background: #720c0c;
+      transform: scale(1.1) rotateX(10deg);
+    }
+    section {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease;
+      transform-style: preserve-3d;
+    }
+    section:hover {
+      transform: rotateY(8deg) rotateX(4deg) scale(1.02);
+    }
+    section h2 {
+      color: #e63946;
+      border-bottom: 2px solid #e63946;
+      padding-bottom: 5px;
+    }
+    footer {
+      text-align: center;
+      background: #e63946;
+      color: #fff;
+      padding: 20px;
+      margin-top: 30px;
+      transform: translateZ(30px);
+      box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🦟 Dengue Fever Awareness</h1>
+    <p>Learn • Prevent • Protect</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#symptoms">Symptoms</a>
+    <a href="#prevention">Prevention</a>
+    <a href="#treatment">Treatment</a>
+    <a href="#statistics">Statistics</a>
+  </nav>
+
+  <section id="about">
+    <h2>What is Dengue Fever?</h2>
+    <p>Dengue fever is a mosquito-borne viral illness caused by dengue viruses (DENV-1 to DENV-4). 
+    It spreads through <em>Aedes aegypti</em> and <em>Aedes albopictus</em> mosquitoes.</p>
+  </section>
+
+  <section id="symptoms">
+    <h2>Symptoms</h2>
+    <ul>
+      <li>High fever, headache, pain behind eyes</li>
+      <li>Muscle & joint pain (“breakbone fever”)</li>
+      <li>Skin rash, nausea, vomiting</li>
+      <li>Mild bleeding (nose/gums)</li>
+      <li>Severe cases: bleeding, shock, organ failure</li>
+    </ul>
+  </section>
+
+  <section id="prevention">
+    <h2>Prevention</h2>
+    <p>✔️ Use repellents • ✔️ Eliminate stagnant water • ✔️ Wear protective clothing • ✔️ Fogging & spraying in outbreak zones</p>
+  </section>
+
+  <section id="treatment">
+    <h2>Treatment</h2>
+    <p>No antiviral cure exists. Supportive care: hydration, rest, paracetamol. Severe dengue requires hospitalization, IV fluids, and monitoring.</p>
+  </section>
+
+  <section id="statistics">
+    <h2>Statistics</h2>
+    <p>🌍 100–400M infections yearly • 500K severe cases • 20–25K deaths • Mostly in Asia, Latin America, Africa</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Dengue Awareness Initiative | Stay Safe, Prevent Dengue</p>
+  </footer>
+</body>
+</html>
