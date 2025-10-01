@@ -1,21 +1,15 @@
 # 🦟 Dengue Awareness Website
 
-A modern website that spreads awareness about **Dengue Fever** with information on:
-- About Dengue
-- Symptoms
-- Prevention
-- Treatment
-- **3D Interactive Global Statistics**
+An attractive awareness website about **Dengue Fever** with a **3D interactive rotating globe** showing global dengue hotspots.
 
-## 🚀 Features
-- Modern Hero Banner
-- 3D Hover Cards
-- Smooth Scroll Navigation
-- Scroll Reveal Animations
-- Plotly.js 3D Dengue Cases Chart
+## Features
+- Hero Section with CTA
+- About, Symptoms, Prevention, Treatment Sections
+- Animated Cards
+- 3D Globe 🌍 with Dengue Data (Globe.gl + Three.js)
+- Smooth scrolling navigation
 
-## 🌐 Deployment
-1. Upload repo to **GitHub**  
-2. Go to **Settings → Pages → Deploy from branch**  
-3. Your site will be live at:
-
+## Deployment
+1. Push repo to GitHub
+2. Enable **GitHub Pages**
+3. Site will be live at:
