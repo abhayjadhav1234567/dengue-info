@@ -1,138 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dengue Awareness | Stay Safe</title>
+  <meta charset="UTF-8">
+  <title>Dengue Awareness</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/2d5b4d6a4b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Hero -->
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>🦟 Dengue Fever Awareness</h1>
-      <p>Learn • Prevent • Protect</p>
-      <a href="#about" class="btn">Explore More</a>
-    </div>
-  </header>
-
-  <!-- Nav -->
+  <!-- Navbar -->
   <nav>
-    <a href="#about">About</a>
-    <a href="#symptoms">Symptoms</a>
-    <a href="#prevention">Prevention</a>
-    <a href="#treatment">Treatment</a>
-    <a href="#statistics">Statistics</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#symptoms">Symptoms</a></li>
+      <li><a href="#prevention">Prevention</a></li>
+      <li><a href="#treatment">Treatment</a></li>
+      <li><a href="#statistics">Statistics</a></li>
+      <li><a href="#india-stats">India Stats</a></li>
+    </ul>
   </nav>
+
+  <!-- Hero -->
+  <header>
+    <h1>Dengue Awareness</h1>
+    <p>Stay informed. Stay safe. Protect against dengue fever.</p>
+  </header>
 
   <!-- About -->
   <section id="about">
     <h2>What is Dengue Fever?</h2>
     <p>
-      Dengue fever is a mosquito-borne viral infection caused by <b>DENV-1 to DENV-4</b>.  
-      It spreads through the bite of infected <i>Aedes aegypti</i> and <i>Aedes albopictus</i> mosquitoes.  
-      About <b>390 million infections occur every year</b> across more than 120 countries.  
+      Dengue is a mosquito-borne viral infection caused by the bite of the Aedes aegypti mosquito. 
+      It spreads rapidly in tropical and subtropical climates worldwide. Severe dengue can be life-threatening.
     </p>
   </section>
 
   <!-- Symptoms -->
   <section id="symptoms">
     <h2>Symptoms</h2>
-    <div class="card-container">
-      <div class="card"><i class="fas fa-thermometer-three-quarters"></i><h3>High Fever</h3><p>Sudden fever up to 104°F.</p></div>
-      <div class="card"><i class="fas fa-head-side-virus"></i><h3>Severe Headache</h3><p>Intense headache & pain behind the eyes.</p></div>
-      <div class="card"><i class="fas fa-bone"></i><h3>Body Pain</h3><p>Muscle, joint, and bone pain (“breakbone fever”).</p></div>
-      <div class="card"><i class="fas fa-tint"></i><h3>Bleeding</h3><p>Nose/gum bleeding, skin rashes.</p></div>
-    </div>
-  </section>
-
-  <!-- Treatment (Table Added Below Symptoms) -->
-  <section id="treatment" style="padding: 30px; font-family: Arial, sans-serif; background: #f1f9ff;">
-    <h2 style="text-align: center; color: #0275d8;">Dengue Fever – Treatment (Home Care & Hospital Care)</h2>
-    
-    <table style="width: 100%; border-collapse: collapse; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-      <thead>
-        <tr style="background-color: #0275d8; color: white;">
-          <th style="padding: 12px; border: 1px solid #ddd;">Type</th>
-          <th style="padding: 12px; border: 1px solid #ddd;">Treatment Step</th>
-          <th style="padding: 12px; border: 1px solid #ddd;">What It Means</th>
-          <th style="padding: 12px; border: 1px solid #ddd;">Why It Is Important</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td rowspan="4" style="padding: 12px; border: 1px solid #ddd; background:#e6f7ff;">🏠 Home Remedies / Self-Care</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Rest & Hydration</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Bed rest, drink water, ORS, juices, coconut water</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Prevents dehydration from fever and plasma leakage</td>
-        </tr>
-        <tr>
-          <td style="padding: 12px; border: 1px solid #ddd;">Fever Control</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Take <b>Paracetamol</b> only (avoid aspirin/ibuprofen)</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Controls fever safely without increasing bleeding risk</td>
-        </tr>
-        <tr>
-          <td style="padding: 12px; border: 1px solid #ddd;">Nutrition</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Eat light food: fruits, vegetables, soups, porridge</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Helps recovery and boosts immunity</td>
-        </tr>
-        <tr>
-          <td style="padding: 12px; border: 1px solid #ddd;">Monitoring at Home</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Check temperature, watch for warning signs (bleeding, vomiting, severe stomach pain)</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Detects early danger signs so hospital care can be given quickly</td>
-        </tr>
-        <tr>
-          <td rowspan="4" style="padding: 12px; border: 1px solid #ddd; background:#fff3e6;">🏥 Doctor / Hospital Care</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Regular Blood Tests</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Platelet count & hematocrit monitoring</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Detects risk of bleeding and shock early</td>
-        </tr>
-        <tr>
-          <td style="padding: 12px; border: 1px solid #ddd;">IV Fluids</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Intravenous fluids if dehydrated or in shock</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Maintains blood pressure and hydration</td>
-        </tr>
-        <tr>
-          <td style="padding: 12px; border: 1px solid #ddd;">Oxygen & Monitoring</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Observation with oxygen support if needed</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Prevents organ damage and shock</td>
-        </tr>
-        <tr>
-          <td style="padding: 12px; border: 1px solid #ddd;">Platelet / Blood Transfusion</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Given only if platelets very low or severe bleeding</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">Saves life in critical dengue cases</td>
-        </tr>
-      </tbody>
-    </table>
+    <ul>
+      <li>High fever</li>
+      <li>Severe headache</li>
+      <li>Pain behind the eyes</li>
+      <li>Muscle and joint pains</li>
+      <li>Nausea and vomiting</li>
+      <li>Skin rash appearing after 2–5 days</li>
+      <li>Mild bleeding (nose or gums)</li>
+    </ul>
   </section>
 
   <!-- Prevention -->
   <section id="prevention">
-    <h2>Prevention</h2>
-    <div class="card-container">
-      <div class="card"><i class="fas fa-mosquito"></i><h3>Avoid Bites</h3><p>Use repellents, nets, and long-sleeved clothes.</p></div>
-      <div class="card"><i class="fas fa-water"></i><h3>Remove Stagnant Water</h3><p>Prevent mosquito breeding sites.</p></div>
-      <div class="card"><i class="fas fa-spray-can"></i><h3>Fogging</h3><p>Community fogging reduces outbreaks.</p></div>
-    </div>
+    <h2>Prevention Tips</h2>
+    <ul>
+      <li>Use mosquito repellents and nets</li>
+      <li>Eliminate stagnant water around your home</li>
+      <li>Wear protective clothing</li>
+      <li>Ensure proper waste disposal</li>
+      <li>Community awareness campaigns</li>
+    </ul>
   </section>
 
-  <!-- Statistics -->
+  <!-- Treatment -->
+  <section id="treatment">
+    <h2>Treatment & First Aid</h2>
+    <p>
+      There is no specific cure for dengue, but supportive care is essential:
+    </p>
+    <ul>
+      <li>Stay hydrated (drink plenty of fluids)</li>
+      <li>Use paracetamol for fever and pain (avoid aspirin/ibuprofen)</li>
+      <li>Rest in a cool, mosquito-free environment</li>
+      <li>Seek immediate medical attention if symptoms worsen (severe abdominal pain, bleeding, difficulty breathing)</li>
+    </ul>
+  </section>
+
+  <!-- Global Statistics with Globe -->
   <section id="statistics">
     <h2>Global Dengue Statistics</h2>
-    <p>🌍 Rotating 3D globe showing dengue hotspots around the world.</p>
+    <p>🌍 Rotating 3D globe showing dengue hotspots worldwide</p>
     <div id="globeViz"></div>
+  </section>
+
+  <!-- Indian States Pie Chart -->
+  <section id="india-stats">
+    <h2>India Dengue Distribution</h2>
+    <p>📊 Pie chart showing cases across different Indian states</p>
+    <div id="pieChart"></div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Dengue Awareness Initiative | Stay Safe, Prevent Dengue</p>
+    <p>© 2025 Dengue Awareness Initiative</p>
   </footer>
 
-  <!-- Libraries -->
+  <!-- Scripts -->
   <script src="https://unpkg.com/three"></script>
   <script src="https://unpkg.com/globe.gl"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
